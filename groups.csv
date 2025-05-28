@@ -1,7 +1,0 @@
-name,description
-aks-cluster-admin, cluster administrators
-aks-cluster-cluster-operator, cluster operators
-aks-cluster-cluster-viewer, cluster view only
-aks-cluster-namespace-admin, namespace administrators
-aks-cluster-namespace-operator, namespace operators
-aks-cluster-namespace-viewer, namespace apps viewe only
