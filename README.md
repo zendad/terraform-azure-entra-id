@@ -29,6 +29,9 @@ No modules.
 | [azuread_group.aad_groups](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/group) | resource |
 | [azuread_group_member.user_group_membership](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/group_member) | resource |
 | [azuread_user.users](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/user) | resource |
+| [azurerm_linux_function_app.my_function](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_function_app) | resource |
+| [azurerm_linux_virtual_machine.my_linux_vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine) | resource |
+| [azurerm_service_plan.my_app_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
 | [random_pet.suffix](https://registry.terraform.io/providers/hashicorp/random/3.3.2/docs/resources/pet) | resource |
 | [azuread_domains.default](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/domains) | data source |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
