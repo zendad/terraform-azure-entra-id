@@ -48,9 +48,6 @@ No modules.
 | [azuread_group.aad_groups](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/group) | resource |
 | [azuread_group_member.user_group_membership](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/group_member) | resource |
 | [azuread_user.users](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/resources/user) | resource |
-| [azurerm_linux_function_app.my_function](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_function_app) | resource |
-| [azurerm_linux_virtual_machine.my_linux_vm](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/linux_virtual_machine) | resource |
-| [azurerm_service_plan.my_app_service](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/service_plan) | resource |
 | [random_pet.suffix](https://registry.terraform.io/providers/hashicorp/random/3.3.2/docs/resources/pet) | resource |
 | [azuread_domains.default](https://registry.terraform.io/providers/hashicorp/azuread/latest/docs/data-sources/domains) | data source |
 | [azurerm_client_config.current](https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/data-sources/client_config) | data source |
@@ -60,8 +57,11 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_environment"></a> [environment](#input\_environment) | Deployment environment | `string` | `""` | no |
+| <a name="input_group_security_enabled"></a> [group\_security\_enabled](#input\_group\_security\_enabled) | Whether the Azure AD group is a security group. Required for assigning roles. | `bool` | `false` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure Region | `string` | `""` | no |
 | <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | Azure Subscription ID | `string` | `""` | no |
+| <a name="input_user_account_enabled"></a> [user\_account\_enabled](#input\_user\_account\_enabled) | Whether the Azure AD user account is enabled. | `bool` | `false` | no |
+| <a name="input_user_force_password_change"></a> [user\_force\_password\_change](#input\_user\_force\_password\_change) | Whether the Azure AD user is forced to change password on next login. | `bool` | `false` | no |
 
 ## Outputs
 
