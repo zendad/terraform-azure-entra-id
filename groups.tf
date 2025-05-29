@@ -1,3 +1,4 @@
+# create AD groups
 resource "azuread_group" "aad_groups" {
   for_each = {
     for group in local.groups : group.name => group
@@ -8,6 +9,7 @@ resource "azuread_group" "aad_groups" {
   security_enabled = var.group_security_enabled
 }
 
+# assign users to groups
 resource "azuread_group_member" "user_group_membership" {
   for_each = {
     for user in local.users :
