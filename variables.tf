@@ -33,3 +33,26 @@ variable "group_security_enabled" {
   default     = false
   description = "Whether the Azure AD group is a security group. Required for assigning roles."
 }
+
+variable "account_tier" {
+  description = "The performance tier of the storage account (Standard or Premium)"
+  type        = string
+  default     = "Standard"
+}
+
+variable "account_replication_type" {
+  description = "The replication type of the storage account (e.g., LRS, GRS, ZRS)"
+  type        = string
+  default     = "LRS"
+}
+
+variable "container_access_type" {
+  description = "The access level of the storage container (private, blob, or container)"
+  type        = string
+  default     = "private"
+
+  validation {
+    condition     = contains(["private", "blob", "container"], var.container_access_type)
+    error_message = "container_access_type must be one of: private, blob, or container"
+  }
+}

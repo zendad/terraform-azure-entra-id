@@ -16,11 +16,11 @@ resource "azuread_group_member" "user_group_membership" {
     "${user.first_name}.${user.last_name}" => {
       role      = user.role
       group_key = local.role_to_group[user.role]
-      user_id   = azuread_user.users["${user.first_name}.${user.last_name}"].id
+      user_id   = azuread_user.users["${user.first_name}.${user.last_name}"].object_id
     }
     if contains(keys(local.role_to_group), user.role)
   }
 
-  group_object_id  = azuread_group.aad_groups[each.value.group_key].id
+  group_object_id  = azuread_group.aad_groups[each.value.group_key].object_id
   member_object_id = each.value.user_id
 }
