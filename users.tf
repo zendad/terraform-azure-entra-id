@@ -13,19 +13,19 @@ resource "azuread_user" "users" {
     local.domain_name
   )
 
-  display_name = "${each.value.first_name} ${each.value.last_name}"
+  display_name  = "${each.value.first_name} ${each.value.last_name}"
   mail_nickname = lower("${each.value.first_name}.${each.value.last_name}")
 
-password = format(
-  "%s%s%s%s!",
-  title(each.value.first_name),         # Capital letter
-  lower(each.value.last_name),          # Lowercase
-  length(each.value.last_name),         # Number
-  substr("!@#%&*ABCXYZ", 0, 1)          # Extra symbol to ensure mix (optional redundancy)
-)
+  password = format(
+    "%s%s%s%s!",
+    title(each.value.first_name), # Capital letter
+    lower(each.value.last_name),  # Lowercase
+    length(each.value.last_name), # Number
+    substr("!@#%&*ABCXYZ", 0, 1)  # Extra symbol to ensure mix (optional redundancy)
+  )
 
-  force_password_change = true
-  account_enabled        = true
+  force_password_change = var.user_force_password_change
+  account_enabled       = var.user_account_enabled
 
   department = each.value.department
   job_title  = each.value.job_title

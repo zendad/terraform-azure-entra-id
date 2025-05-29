@@ -16,3 +16,20 @@ variable "environment" {
   default     = ""
 }
 
+variable "user_force_password_change" {
+  type        = bool
+  default     = false
+  description = "Whether the Azure AD user is forced to change password on next login."
+}
+
+variable "user_account_enabled" {
+  type        = bool
+  default     = false
+  description = "Whether the Azure AD user account is enabled."
+}
+
+variable "group_security_enabled" {
+  type        = bool
+  default     = false
+  description = "Whether the Azure AD group is a security group. Required for assigning roles."
+}

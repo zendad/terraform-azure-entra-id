@@ -5,7 +5,7 @@ resource "azuread_group" "aad_groups" {
 
   display_name     = each.value.name
   description      = each.value.description
-  security_enabled = true
+  security_enabled = var.group_security_enabled
 }
 
 resource "azuread_group_member" "user_group_membership" {
@@ -19,6 +19,6 @@ resource "azuread_group_member" "user_group_membership" {
     if contains(keys(local.role_to_group), user.role)
   }
 
-  group_object_id   = azuread_group.aad_groups[each.value.group_key].id
-  member_object_id  = each.value.user_id
+  group_object_id  = azuread_group.aad_groups[each.value.group_key].id
+  member_object_id = each.value.user_id
 }
