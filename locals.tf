@@ -8,12 +8,12 @@ locals {
   groups      = csvdecode(file("${path.module}/groups.csv"))
   # Map roles to group names
   role_to_group = {
-    "clusteradmin"      = "aks-cluster-admin"
-    "clusteroperator"   = "aks-cluster-cluster-operator"
-    "clusterviewer"     = "aks-cluster-cluster-viewer"
-    "namespaceadmin"    = "aks-cluster-namespace-admin"
-    "namespaceoperator" = "aks-cluster-namespace-operator"
-    "namespaceviewer"   = "aks-cluster-namespace-viewer"
+    "clusteradmin"      = "aks-cluster-clusteradmin"
+    "clusteroperator"   = "aks-cluster-clusteroperator"
+    "clusterviewer"     = "aks-cluster-clusterviewer"
+    "namespaceadmin"    = "aks-cluster-namespaceadmin"
+    "namespaceoperator" = "aks-cluster-namespaceoperator"
+    "namespaceviewer"   = "aks-cluster-namespaceviewer"
   }
 
 }

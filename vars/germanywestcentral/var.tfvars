@@ -1,7 +1,7 @@
 # tfvars
-subscription_id = ""
-location        = "germanywestcentral"
-environment     = "test"
-force_password_change = true
-account_enabled       = true
-security_enabled = true
+subscription_id            = "03956095-a7be-429d-98b2-0ec426116a10"
+location                   = "germanywestcentral"
+environment                = "test"
+user_force_password_change = true
+user_account_enabled       = true
+group_security_enabled     = true
