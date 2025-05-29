@@ -8,13 +8,13 @@ Role-Based Group Assignment: Automatically assigns users to Entra ID groups base
 
 Kubernetes Role Mapping: Supports role mappings such as namespaceadmin, clusteradmin, namespaceviewer, etc., to Entra ID groups like:
 
-aks-cluster-namespace-admin
+aks-cluster-namespaceadmin
 
-aks-cluster-cluster-admin
+aks-cluster-clusteradmin
 
-aks-cluster-namespace-operator
+aks-cluster-namespaceoperator
 
-aks-cluster-cluster-viewer, etc.
+aks-cluster-clusterviewer, etc.
 
 Example Use Case
 Provision users like DevOps Engineers or Support Engineers and automatically assign them to appropriate groups based on their responsibilities (e.g., clusteradmin, namespaceoperator)—enabling seamless RBAC enforcement in AKS.
