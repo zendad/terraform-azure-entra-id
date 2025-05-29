@@ -65,7 +65,6 @@ No modules.
 | <a name="input_environment"></a> [environment](#input\_environment) | Deployment environment | `string` | `""` | no |
 | <a name="input_group_security_enabled"></a> [group\_security\_enabled](#input\_group\_security\_enabled) | Whether the Azure AD group is a security group. Required for assigning roles. | `bool` | `false` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure Region | `string` | `""` | no |
-| <a name="input_state_file_key"></a> [state\_file\_key](#input\_state\_file\_key) | Name of the state file (key) stored in the container | `string` | `"terraform.tfstate"` | no |
 | <a name="input_subscription_id"></a> [subscription\_id](#input\_subscription\_id) | Azure Subscription ID | `string` | `""` | no |
 | <a name="input_user_account_enabled"></a> [user\_account\_enabled](#input\_user\_account\_enabled) | Whether the Azure AD user account is enabled. | `bool` | `false` | no |
 | <a name="input_user_force_password_change"></a> [user\_force\_password\_change](#input\_user\_force\_password\_change) | Whether the Azure AD user is forced to change password on next login. | `bool` | `false` | no |

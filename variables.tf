@@ -34,12 +34,6 @@ variable "group_security_enabled" {
   description = "Whether the Azure AD group is a security group. Required for assigning roles."
 }
 
-variable "state_file_key" {
-  description = "Name of the state file (key) stored in the container"
-  type        = string
-  default     = "terraform.tfstate"
-}
-
 variable "account_tier" {
   description = "The performance tier of the storage account (Standard or Premium)"
   type        = string
