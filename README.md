@@ -1,4 +1,23 @@
-# AKS Cluster Creation
+# Azure Entra ID
+This Terraform automates the management of Microsoft Entra ID (formerly Azure Active Directory) users and groups using declarative CSV inputs. It is designed to streamline identity provisioning and access control for Azure Kubernetes Service (AKS) and related environments.
+
+Features
+User and Group Management: Define users in users.csv and groups in groups.csv.
+
+Role-Based Group Assignment: Automatically assigns users to Entra ID groups based on their role defined in the CSV.
+
+Kubernetes Role Mapping: Supports role mappings such as namespaceadmin, clusteradmin, namespaceviewer, etc., to Entra ID groups like:
+
+aks-cluster-namespace-admin
+
+aks-cluster-cluster-admin
+
+aks-cluster-namespace-operator
+
+aks-cluster-cluster-viewer, etc.
+
+Example Use Case
+Provision users like DevOps Engineers or Support Engineers and automatically assign them to appropriate groups based on their responsibilities (e.g., clusteradmin, namespaceoperator)—enabling seamless RBAC enforcement in AKS.
 
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
