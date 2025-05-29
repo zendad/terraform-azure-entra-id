@@ -62,6 +62,7 @@ No modules.
 | <a name="input_account_replication_type"></a> [account\_replication\_type](#input\_account\_replication\_type) | The replication type of the storage account (e.g., LRS, GRS, ZRS) | `string` | `"LRS"` | no |
 | <a name="input_account_tier"></a> [account\_tier](#input\_account\_tier) | The performance tier of the storage account (Standard or Premium) | `string` | `"Standard"` | no |
 | <a name="input_container_access_type"></a> [container\_access\_type](#input\_container\_access\_type) | The access level of the storage container (private, blob, or container) | `string` | `"private"` | no |
+| <a name="input_default_tags"></a> [default\_tags](#input\_default\_tags) | Default tags for all resources | `map(string)` | `{}` | no |
 | <a name="input_environment"></a> [environment](#input\_environment) | Deployment environment | `string` | `""` | no |
 | <a name="input_group_security_enabled"></a> [group\_security\_enabled](#input\_group\_security\_enabled) | Whether the Azure AD group is a security group. Required for assigning roles. | `bool` | `false` | no |
 | <a name="input_location"></a> [location](#input\_location) | Azure Region | `string` | `""` | no |

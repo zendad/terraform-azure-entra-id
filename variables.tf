@@ -16,6 +16,12 @@ variable "environment" {
   default     = ""
 }
 
+variable "default_tags" {
+  description = "Default tags for all resources"
+  type        = map(string)
+  default     = {}
+}
+
 variable "user_force_password_change" {
   type        = bool
   default     = false
